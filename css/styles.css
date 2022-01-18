@@ -21,6 +21,7 @@
   --team-background-color: #f5f4fa;
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --gallery-border-color: #eeeeee;
+  --header-border-color: #ececec;
 }
 
 body {
@@ -92,6 +93,9 @@ p {
   color: var(--logo-accent-color);
 }
 /* page-header */
+.page-header {
+  border-bottom: 1px solid var(--header-border-color);
+}
 
 .header-grup {
   display: flex;
@@ -216,16 +220,10 @@ p {
 }
 .features-item {
   width: calc((100% - 90px) / 4);
-
-  margin-right: 30px;
-  margin-bottom: 30px;
 }
 
-.features-item:nth-child(4n) {
-  margin-right: 0;
-}
-.features-item:nth-last-child(-n + 4) {
-  margin-bottom: 0;
+.features-item + .features-item {
+  margin-left: 30px;
 }
 
 .features-title {
@@ -249,10 +247,9 @@ p {
 }
 .works-item {
   width: calc((100% - 60px) / 3);
-  margin-right: 30px;
 }
-.works-item:nth-child(3n) {
-  margin-right: 0;
+.works-item + .works-item {
+  margin-left: 30px;
 }
 
 /* Наша команда */
@@ -265,10 +262,9 @@ p {
 }
 .team-item {
   width: calc((100% - 90px) / 4);
-  margin-right: 30px;
 }
-.team-item:nth-child(4n) {
-  margin-right: 0;
+.team-item + .team-item {
+  margin-left: 30px;
 }
 .team-titel-text {
   padding-top: 30px;
@@ -313,7 +309,8 @@ p {
 .footer-color {
   color: var(--primery-white-color);
 }
-.logo-link {
+.footer-logo-link {
+  display: block;
   margin-bottom: 20px;
 }
 .address-item {
